@@ -95,11 +95,8 @@ const App = () => {
            <h1>
             Find <span className="text-gradient">Movies</span> You'll Enjoy Without the Hassle
            </h1>
-
-           <Search  searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
-        </header> 
-           
-        {trendingMovies.length > 0 && (
+             
+              {trendingMovies.length > 0 && (
           <section className="trending">
             <h2>Trending Movies</h2>
 
@@ -113,8 +110,16 @@ const App = () => {
             </ul>
           </section>
         )}
+          <div className="flex items-center justify-center gap-5">
+               <h2 className="mx-5">Search</h2>
+           <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+          </div>
+          
+        </header> 
+           
+     
 
-        <section className="all-movies">
+        <section className="all-movies my-5">
 
           <h2>All Movies</h2>
 
